@@ -13,22 +13,23 @@ html, body {
     color: #fef8ea;
     font-weight: 300;
 }
-header {
-    z-index: 2;
-}
-.navbar a {
+.navbar a.nav-link {
+    position: relative;
     color: #fef8ea;
     text-decoration: none;
     font-weight: 300;
-    padding: 0.5rem;
+    padding: 0.75rem;
     transition: background-color 0.25s ease-out;
+    overflow: hidden; /* Nécéssaire pour l'ondulation*/
+    display: inline-block; /* Nécéssaire pour l'ondulation*/
 }
-
-.navbar a:hover {
+.navbar a#linkedin {
+    color: #fef8ea;
+    text-decoration: none;
+    padding: 0 0.55rem;
+}
+.navbar a.nav-link:hover {
     background-color: var(--main-color-3);
-}
-.navbar a#linkedin:hover {
-    background-color: unset;
 }
 .w-50 {
     width: 50%;
@@ -39,6 +40,7 @@ header {
     height: 5rem;
     background-color: var(--main-bg-color);
     position: fixed;
+    z-index: 10;
 }
 nav.navbar {
     height: 100%;
@@ -49,7 +51,7 @@ nav.navbar {
     align-items: center;
     font-size: 1.15rem;
 }
-.navbar span {
+.navbar span#brand {
     font-weight: 500;
 }
 ul.list-navbar {
@@ -57,7 +59,7 @@ ul.list-navbar {
     list-style: none;
 }
 ul.list-navbar li {
-    padding:0 0.5rem;
+    padding: 0.15rem;
 }
 .content-adjust{
     width: 75%; 
@@ -91,12 +93,33 @@ section#introduction p {
 section#introduction h2 {
     font-size: 2rem;
 }
-
-
 section#skills {
     height: 270vh;
     background-image: url(../img/wave.svg);
     background-position: top;
     background-repeat: no-repeat;
     padding: 8rem 0rem;
+}
+/* Animation d'ondulation */
+span:not(#brand) {
+    position: absolute;
+
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 0.75s linear;
+    overflow: hidden;
+}
+@keyframes ripple {
+    from {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    to {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }
