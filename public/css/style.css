@@ -13,6 +13,9 @@ html, body {
     color: #fef8ea;
     font-weight: 300;
 }
+header {
+    z-index: 2;
+}
 .navbar a {
     color: #fef8ea;
     text-decoration: none;
@@ -61,7 +64,7 @@ ul.list-navbar li {
     display: flex;
 }
 section#introduction {
-    height: 60vh;
+    padding-top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,20 +74,29 @@ section#introduction {
 section#introduction img {
     border-radius: 50%;
     width: 350px;
+    filter: contrast(115%);
+    z-index: 1;
 }
 section#introduction .w-50:nth-child(1) {
     text-align: center;
 }
 section#introduction .w-50:nth-child(2) {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+section#introduction p {
+    margin-top: 0.1rem;
 }
 section#introduction h2 {
     font-size: 2rem;
 }
+
+
 section#skills {
     height: 270vh;
     background-image: url(../img/wave.svg);
     background-position: top;
     background-repeat: no-repeat;
+    padding: 8rem 0rem;
 }
