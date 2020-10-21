@@ -103,7 +103,6 @@ section#skills {
 /* Animation d'ondulation */
 span:not(#brand) {
     position: absolute;
-
     background-color: #fff;
     transform: translate(-50%, -50%);
     pointer-events: none;

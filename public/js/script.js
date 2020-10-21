@@ -15,6 +15,6 @@ rippleLink.forEach(link => {
         //Et le supprimer a la fin de l'effet
         setTimeout(() => {
             ripples.remove()
-        }, 1000);
+        }, 750);
     })
 })
