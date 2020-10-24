@@ -8,6 +8,7 @@ rippleLink.forEach(link => {
 
         //Créer l'élément d'ondulation
         let ripples = document.createElement('span');
+        ripples.classList.add('ripple');
         ripples.style.left = x + 'px';
         ripples.style.top = y + 'px';
         this.appendChild(ripples);
@@ -15,6 +16,6 @@ rippleLink.forEach(link => {
         //Et le supprimer a la fin de l'effet
         setTimeout(() => {
             ripples.remove()
-        }, 750);
+        }, 7500);
     })
 })
