@@ -63,6 +63,7 @@ ul.list-navbar li {
 .content-adjust{
     width: 75%; 
     display: flex;
+    margin: auto;
 }
 section#introduction {
     padding-top: 10rem;
@@ -109,7 +110,7 @@ section#skills {
     background-image: url(../img/wave.svg);
     background-position: top;
     background-repeat: no-repeat;
-    padding: 20rem 0rem;
+    padding-top: 20rem;
     color: black;
     display: flex;
     justify-content: center;
@@ -145,6 +146,7 @@ section#skills .front-end, .back-end, .other {
     margin:0 auto;
     border: 1px solid #CCC;
     border-radius: 15px;
+    min-width: 380px;
 }
 
 .skill-container {
@@ -152,6 +154,7 @@ section#skills .front-end, .back-end, .other {
     align-items: center;
     margin:1.5rem 0;
     width: 100%;
+    color: #333;
 }
 .skill-container img {
     margin-right: 0.5rem;
@@ -197,4 +200,13 @@ section#skills .other .skill-container {
 }
 section#skills h3 {
     color: #5f95e6;
+}
+
+
+section#experiences {
+    color: black;
+    padding: 20rem 0;
+}
+section#experiences .timeline {
+    border-bottom: 1px solid black;
 }
